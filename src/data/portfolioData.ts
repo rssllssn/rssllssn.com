@@ -140,7 +140,7 @@ React · D3.js · Node.js · Express · InfluxDB
 Let's connect! You can reach me through any of the following:
 
 - **GitHub**: [github.com/rssllssn](https://github.com/rssllssn)
-- **Email**: hello@rssllssn.dev
+- **Email**: [rxssellsioson@gmail.com](mailto:rxssellsioson@gmail.com)
 
 ---
 
