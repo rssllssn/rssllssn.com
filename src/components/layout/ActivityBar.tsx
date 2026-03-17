@@ -21,7 +21,7 @@ export default function ActivityBar({
   onPanelChange,
 }: ActivityBarProps) {
   return (
-    <div className="flex flex-col items-center bg-[var(--bg-activitybar)] border-r border-[var(--border)] select-none">
+    <div className="flex flex-col items-center bg-[var(--bg-activitybar)] border-r border-[var(--border)] select-none h-full">
       {/* Top icons */}
       <div className="flex flex-col items-center w-full flex-1">
         {items.map(({ id, icon: Icon, label }) => {
@@ -30,9 +30,10 @@ export default function ActivityBar({
             <button
               key={id}
               title={label}
+              aria-label={label}
               onClick={() => onPanelChange(isActive ? null : id)}
               className={`
-                relative flex items-center justify-center w-full h-12
+                relative flex items-center justify-center w-full h-12 md:h-12 min-h-[44px]
                 text-[var(--text-secondary)] hover:text-[var(--text-white)]
                 transition-colors duration-150 cursor-pointer
                 ${isActive ? "text-[var(--text-white)]" : ""}
@@ -55,7 +56,8 @@ export default function ActivityBar({
           target="_blank"
           rel="noopener noreferrer"
           title="GitHub"
-          className="flex items-center justify-center w-full h-12 text-[var(--text-secondary)] hover:text-[var(--text-white)] transition-colors duration-150"
+          aria-label="GitHub profile"
+          className="flex items-center justify-center w-full h-12 min-h-[44px] text-[var(--text-secondary)] hover:text-[var(--text-white)] transition-colors duration-150"
         >
           <VscGithub size={24} />
         </a>

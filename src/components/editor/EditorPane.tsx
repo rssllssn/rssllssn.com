@@ -14,8 +14,8 @@ export default function EditorPane() {
 
   if (activeFile.language === "markdown") {
     return (
-      <div className="flex-1 overflow-auto p-8 bg-[var(--bg-editor)]">
-        <article className="prose prose-invert max-w-3xl mx-auto prose-headings:text-[var(--text-white)] prose-p:text-[var(--text-primary)] prose-strong:text-[var(--text-white)] prose-a:text-[var(--accent)] prose-code:text-[var(--syntax-string)] prose-code:bg-[rgba(255,255,255,0.06)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-[var(--bg-sidebar)] prose-pre:border prose-pre:border-[var(--border)] prose-blockquote:border-l-[var(--accent)] prose-li:text-[var(--text-primary)] prose-hr:border-[var(--border)]">
+      <div className="flex-1 overflow-auto p-4 md:p-8 bg-[var(--bg-editor)]">
+        <article className="prose prose-invert max-w-3xl mx-auto prose-headings:text-[var(--text-white)] prose-p:text-[var(--text-primary)] prose-strong:text-[var(--text-white)] prose-a:text-[var(--accent)] prose-a:underline prose-code:text-[var(--syntax-string)] prose-code:bg-[rgba(255,255,255,0.06)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-[var(--bg-sidebar)] prose-pre:border prose-pre:border-[var(--border)] prose-blockquote:border-l-[var(--accent)] prose-li:text-[var(--text-primary)] prose-hr:border-[var(--border)] prose-img:rounded prose-img:max-w-full prose-table:text-sm">
           <Markdown remarkPlugins={[remarkGfm]}>{activeFile.content}</Markdown>
         </article>
       </div>
@@ -27,22 +27,22 @@ export default function EditorPane() {
   const gutterWidth = String(lines.length).length;
 
   return (
-    <div className="flex-1 overflow-auto bg-[var(--bg-editor)] font-mono text-sm">
+    <div className="flex-1 overflow-auto bg-[var(--bg-editor)] font-mono text-xs md:text-sm">
       <div className="flex min-w-fit">
         {/* Line number gutter */}
-        <div className="flex flex-col items-end pr-4 pl-4 py-4 text-[var(--text-line-number)] select-none bg-[var(--bg-editor)] sticky left-0">
+        <div className="flex flex-col items-end pr-2 md:pr-4 pl-2 md:pl-4 py-4 text-[var(--text-line-number)] select-none bg-[var(--bg-editor)] sticky left-0 shrink-0">
           {lines.map((_, i) => (
-            <span key={i} className="leading-6">
+            <span key={i} className="leading-6 text-[10px] md:text-xs">
               {String(i + 1).padStart(gutterWidth, " ")}
             </span>
           ))}
         </div>
 
         {/* Code content */}
-        <pre className="py-4 pr-8 flex-1">
-          <code className="text-[var(--text-primary)] leading-6 block">
+        <pre className="py-4 pr-4 md:pr-8 flex-1 overflow-x-auto -webkit-overflow-scrolling-touch">
+          <code className="text-[var(--text-primary)] leading-6 block text-[10px] md:text-xs">
             {lines.map((line, i) => (
-              <div key={i} className="hover:bg-[rgba(255,255,255,0.04)] leading-6">
+              <div key={i} className="hover:bg-[rgba(255,255,255,0.04)] leading-6 transition-colors duration-100">
                 {highlightLine(line, activeFile.language)}
               </div>
             ))}
@@ -115,22 +115,17 @@ function highlightLine(line: string, language: string): React.ReactNode {
 
 function WelcomeScreen() {
   return (
-    <div className="flex-1 flex flex-col items-center justify-center bg-[var(--bg-editor)] text-[var(--text-secondary)] select-none">
-      <div className="text-center space-y-6">
-        <img 
-          src="/rssllssn.png" 
-          alt="rssllssn logo" 
-          className="w-24 h-24 rounded-lg shadow-lg"
-        />
-        <h1 className="text-5xl font-light text-[var(--text-watermark)] tracking-tight">
+    <div className="flex-1 flex flex-col items-center justify-center bg-[var(--bg-editor)] text-[var(--text-secondary)] select-none px-4 py-8 md:px-0 md:py-0">
+      <div className="text-center space-y-6 max-w-md">
+        <h1 className="text-3xl md:text-5xl font-light text-[var(--text-watermark)] tracking-tight break-words">
           rssllssn.com
         </h1>
-        <div className="space-y-2 text-sm">
-          <p>
-            <kbd className="px-2 py-0.5 rounded bg-[var(--bg-sidebar)] border border-[var(--border)] text-[var(--text-primary)] text-xs">
+        <div className="space-y-3 text-xs md:text-sm">
+          <p className="leading-relaxed">
+            <kbd className="px-2 py-1 md:py-0.5 rounded bg-[var(--bg-sidebar)] border border-[var(--border)] text-[var(--text-primary)] text-xs inline-block">
               ← Explorer
             </kbd>
-            {" "}Open a file from the sidebar to get started
+            <span className="block md:inline md:ml-2">Open a file from the sidebar to get started</span>
           </p>
         </div>
       </div>

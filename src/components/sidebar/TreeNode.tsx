@@ -16,9 +16,10 @@ import {
 interface TreeNodeProps {
   node: FileTreeNode;
   depth: number;
+  onFileSelect?: () => void;
 }
 
-export default function TreeNode({ node, depth }: TreeNodeProps) {
+export default function TreeNode({ node, depth, onFileSelect }: TreeNodeProps) {
   const [expanded, setExpanded] = useState(depth === 0);
   const openFile = useEditorStore((s) => s.openFile);
   const activeTabId = useEditorStore((s) => s.activeTabId);
@@ -31,6 +32,7 @@ export default function TreeNode({ node, depth }: TreeNodeProps) {
       setExpanded((prev) => !prev);
     } else {
       openFile(node);
+      onFileSelect?.();
     }
   };
 
@@ -41,12 +43,13 @@ export default function TreeNode({ node, depth }: TreeNodeProps) {
       <button
         onClick={handleClick}
         className={`
-          flex items-center w-full gap-1 px-1 py-[2px] text-sm
+          flex items-center w-full gap-1 px-1 py-1 md:py-[2px] text-xs md:text-sm min-h-[44px] md:min-h-auto
           hover:bg-[var(--bg-list-hover)] cursor-pointer
           transition-colors duration-100 text-left whitespace-nowrap
           ${isActive ? "bg-[var(--bg-list-active)] text-[var(--text-white)]" : "text-[var(--text-primary)]"}
         `}
         style={{ paddingLeft: `${depth * 16 + 8}px` }}
+        aria-label={`${isFolder ? 'Toggle' : 'Open'} ${node.name}`}
       >
         {/* Chevron (only for folders) */}
         {isFolder ? (
@@ -73,7 +76,7 @@ export default function TreeNode({ node, depth }: TreeNodeProps) {
       {isFolder && expanded && node.children && (
         <div>
           {node.children.map((child) => (
-            <TreeNode key={child.id} node={child} depth={depth + 1} />
+            <TreeNode key={child.id} node={child} depth={depth + 1} onFileSelect={onFileSelect} />
           ))}
         </div>
       )}

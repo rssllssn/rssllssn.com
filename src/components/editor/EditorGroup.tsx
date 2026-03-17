@@ -6,7 +6,7 @@ import EditorPane from "./EditorPane";
 
 export default function EditorGroup() {
   return (
-    <div className="flex flex-col min-w-0 min-h-0 overflow-hidden bg-[var(--bg-editor)]">
+    <div className="flex flex-col min-w-0 min-h-0 overflow-hidden bg-[var(--bg-editor)] h-full">
       <EditorTabs />
       <EditorPane />
     </div>

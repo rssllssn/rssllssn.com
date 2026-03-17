@@ -13,19 +13,34 @@ export const portfolioData: FileTreeNode[] = [
         language: "markdown",
         content: `# About Me
 
-Hi, I'm **Russell** — a developer who loves building things for the web.
+Hi, I'm **Russell** — a full-stack developer passionate about building creative, user-focused web applications and tools.
 
-## Background
+## What I Do
 
-I'm passionate about crafting clean, performant, and user-friendly applications.
-I work with **React**, **Next.js**, **TypeScript**, and **Tailwind CSS** on a daily basis.
+I specialize in building modern web applications with **React**, **Next.js**, **TypeScript**, and **Tailwind CSS**. I'm experienced with both frontend and backend development, and I love working on projects that combine design, functionality, and innovation.
+
+## Featured Projects
+
+- **Apex Tracker F1** — Formula 1 race tracker with live data and driver standings
+- **Taglish Translator** — Trilingual translation app with speech-to-text and AI-powered Taglish
+- **CryptArtist Studio** — Creative suite with 11 integrated programs (contributed to VibeCodeWorker, DictatePic, and Tax Help)
+- **Sitefari** — Ongoing creative project in active development
+- **Birch Creek Building** — WordPress-based professional website
+
+## Tech Stack
+
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS, Vanilla JavaScript
+- **Backend:** Node.js, Vercel Serverless, Rust
+- **APIs & Tools:** OpenAI, OpenRouter, Ergast F1 API, FFmpeg, Tauri
+- **Other:** WordPress, HTML5, CSS3, Web Speech API
 
 ## Interests
 
 - 🚀 Web performance & accessibility
-- 🎨 UI/UX design systems
-- 🛠️ Developer tooling
-- 📷 Photography
+- 🎨 UI/UX design and modern interfaces
+- 🤖 AI integration in creative tools
+- 🛠️ Developer tooling and automation
+- � Responsive, mobile-first design
 
 ---
 
@@ -39,90 +54,6 @@ I work with **React**, **Next.js**, **TypeScript**, and **Tailwind CSS** on a da
     name: "projects",
     type: "folder",
     children: [
-      {
-        id: "projects/project-alpha",
-        name: "project-alpha",
-        type: "folder",
-        children: [
-          {
-            id: "projects/project-alpha/README.md",
-            name: "README.md",
-            type: "file",
-            language: "markdown",
-            content: `# Project Alpha
-
-A full-stack web application built with **Next.js** and **PostgreSQL**.
-
-## Features
-
-- Server-side rendering with incremental static regeneration
-- JWT authentication with refresh tokens
-- Real-time notifications via WebSockets
-
-## Tech Stack
-
-\`\`\`
-Next.js · React · TypeScript · PostgreSQL · Prisma · Tailwind CSS
-\`\`\`
-`,
-          },
-          {
-            id: "projects/project-alpha/index.ts",
-            name: "index.ts",
-            type: "file",
-            language: "typescript",
-            content: `import { NextResponse } from "next/server";
-
-export async function GET(request: Request) {
-  const data = await fetchProjects();
-
-  return NextResponse.json({
-    success: true,
-    projects: data,
-    timestamp: new Date().toISOString(),
-  });
-}
-
-async function fetchProjects() {
-  // In production this would query a database
-  return [
-    { id: 1, name: "Project Alpha", status: "active" },
-    { id: 2, name: "Project Beta", status: "in-progress" },
-  ];
-}
-`,
-          },
-        ],
-      },
-      {
-        id: "projects/project-beta",
-        name: "project-beta",
-        type: "folder",
-        children: [
-          {
-            id: "projects/project-beta/README.md",
-            name: "README.md",
-            type: "file",
-            language: "markdown",
-            content: `# Project Beta
-
-A real-time dashboard for monitoring IoT sensor data.
-
-## Features
-
-- Live data streaming with Server-Sent Events
-- Interactive charts with D3.js
-- Configurable alert thresholds
-
-## Tech Stack
-
-\`\`\`
-React · D3.js · Node.js · Express · InfluxDB
-\`\`\`
-`,
-          },
-        ],
-      },
       {
         id: "projects/apex-tracker-f1",
         name: "apex-tracker-f1",
@@ -162,35 +93,29 @@ HTML · CSS · Vanilla JavaScript · Ergast F1 API · OpenF1 API
         ],
       },
       {
-        id: "projects/taglish-translator",
-        name: "taglish-translator",
+        id: "projects/birch-creek-building",
+        name: "birch-creek-building",
         type: "folder",
         children: [
           {
-            id: "projects/taglish-translator/README.md",
+            id: "projects/birch-creek-building/README.md",
             name: "README.md",
             type: "file",
             language: "markdown",
-            content: `# Taglish Translate 🇵🇭
+            content: `# Birch Creek Building
 
-A beautiful, sleek, and responsive translation web application built to facilitate seamless translation between English, Tagalog, and Taglish.
+A professional WordPress-based website for Birch Creek Building.
 
-[View Live](https://taglish-translate.vercel.app/) · [View on GitHub](https://github.com/rssllssn/Taglish-Translate)
+[View Website](https://www.birchcreekbuilding.com)
 
-## Features
+## Overview
 
-- **Trilingual Translation** — Instantly translate between English, Tagalog, and Taglish
-- **Taglish Vibes** — Select between "Casual" (colloquial slang) and "Formal" (professional) tones
-- **Speech-to-Text** — Dictate text directly using the Web Speech API
-- **Text-to-Speech** — Listen to translated text with built-in speaker button
-- **Premium Interface** — Stunning glassmorphism dark-mode aesthetic
-- **Rate Limited** — Built-in IP rate limiting (100 requests/hour) to prevent abuse
-- **Copy to Clipboard** — One-click copying of translated text
+Contributed to the development and maintenance of the Birch Creek Building website, a WordPress-powered platform showcasing building services and portfolio work.
 
 ## Tech Stack
 
 \`\`\`
-HTML5 · CSS3 · Vanilla JavaScript · Node.js · Vercel Serverless · OpenAI GPT-3.5
+WordPress · PHP · MySQL
 \`\`\`
 `,
           },
@@ -240,35 +165,6 @@ React · TypeScript · Rust Backend · Tauri · OpenRouter AI · FFmpeg
         ],
       },
       {
-        id: "projects/birch-creek-building",
-        name: "birch-creek-building",
-        type: "folder",
-        children: [
-          {
-            id: "projects/birch-creek-building/README.md",
-            name: "README.md",
-            type: "file",
-            language: "markdown",
-            content: `# Birch Creek Building
-
-A professional WordPress-based website for Birch Creek Building.
-
-[View Website](https://www.birchcreekbuilding.com)
-
-## Overview
-
-Contributed to the development and maintenance of the Birch Creek Building website, a WordPress-powered platform showcasing building services and portfolio work.
-
-## Tech Stack
-
-\`\`\`
-WordPress · PHP · MySQL
-\`\`\`
-`,
-          },
-        ],
-      },
-      {
         id: "projects/sitefari",
         name: "sitefari",
         type: "folder",
@@ -287,6 +183,41 @@ An ongoing creative project in active development.
 ## Overview
 
 Sitefari is a continuously evolving project combining design, development, and creative innovation. Currently in active development with regular updates and improvements.
+`,
+          },
+        ],
+      },
+      {
+        id: "projects/taglish-translator",
+        name: "taglish-translator",
+        type: "folder",
+        children: [
+          {
+            id: "projects/taglish-translator/README.md",
+            name: "README.md",
+            type: "file",
+            language: "markdown",
+            content: `# Taglish Translate 🇵🇭
+
+A beautiful, sleek, and responsive translation web application built to facilitate seamless translation between English, Tagalog, and Taglish.
+
+[View Live](https://taglish-translate.vercel.app/) · [View on GitHub](https://github.com/rssllssn/Taglish-Translate)
+
+## Features
+
+- **Trilingual Translation** — Instantly translate between English, Tagalog, and Taglish
+- **Taglish Vibes** — Select between "Casual" (colloquial slang) and "Formal" (professional) tones
+- **Speech-to-Text** — Dictate text directly using the Web Speech API
+- **Text-to-Speech** — Listen to translated text with built-in speaker button
+- **Premium Interface** — Stunning glassmorphism dark-mode aesthetic
+- **Rate Limited** — Built-in IP rate limiting (100 requests/hour) to prevent abuse
+- **Copy to Clipboard** — One-click copying of translated text
+
+## Tech Stack
+
+\`\`\`
+HTML5 · CSS3 · Vanilla JavaScript · Node.js · Vercel Serverless · OpenAI GPT-3.5
+\`\`\`
 `,
           },
         ],
