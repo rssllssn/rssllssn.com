@@ -123,6 +123,174 @@ React · D3.js · Node.js · Express · InfluxDB
           },
         ],
       },
+      {
+        id: "projects/apex-tracker-f1",
+        name: "apex-tracker-f1",
+        type: "folder",
+        children: [
+          {
+            id: "projects/apex-tracker-f1/README.md",
+            name: "README.md",
+            type: "file",
+            language: "markdown",
+            content: `# APEX TRACKER
+
+A sleek, modern Formula 1 race tracker and dashboard. Browse race schedules, view detailed race results, and check driver standings — all powered by live F1 data.
+
+[View on GitHub](https://github.com/rssllssn/apextrackerf1)
+
+## Features
+
+- **Race Schedule** — View the full season calendar with upcoming and completed race indicators
+- **Race Results** — Click any completed race to see full results with driver photos and team logos
+- **Driver Standings** — Live driver championship standings with headshots and team branding
+- **Driver Profiles** — Browse detailed driver profiles with statistics and team information
+- **Team Profiles** — Explore team information, current drivers, and constructor details
+- **Season Selector** — Browse historical data for the 2023–2025 seasons or the current season
+- **Smart Caching** — API responses cached in localStorage with configurable TTLs
+- **Responsive Design** — Fully responsive across all devices
+
+## Tech Stack
+
+\`\`\`
+HTML · CSS · Vanilla JavaScript · Ergast F1 API · OpenF1 API
+\`\`\`
+
+> **Disclaimer:** This is an unofficial project and is not affiliated with Formula 1, the FIA, or any related companies.
+`,
+          },
+        ],
+      },
+      {
+        id: "projects/taglish-translator",
+        name: "taglish-translator",
+        type: "folder",
+        children: [
+          {
+            id: "projects/taglish-translator/README.md",
+            name: "README.md",
+            type: "file",
+            language: "markdown",
+            content: `# Taglish Translate 🇵🇭
+
+A beautiful, sleek, and responsive translation web application built to facilitate seamless translation between English, Tagalog, and Taglish.
+
+[View Live](https://taglish-translate.vercel.app/) · [View on GitHub](https://github.com/rssllssn/Taglish-Translate)
+
+## Features
+
+- **Trilingual Translation** — Instantly translate between English, Tagalog, and Taglish
+- **Taglish Vibes** — Select between "Casual" (colloquial slang) and "Formal" (professional) tones
+- **Speech-to-Text** — Dictate text directly using the Web Speech API
+- **Text-to-Speech** — Listen to translated text with built-in speaker button
+- **Premium Interface** — Stunning glassmorphism dark-mode aesthetic
+- **Rate Limited** — Built-in IP rate limiting (100 requests/hour) to prevent abuse
+- **Copy to Clipboard** — One-click copying of translated text
+
+## Tech Stack
+
+\`\`\`
+HTML5 · CSS3 · Vanilla JavaScript · Node.js · Vercel Serverless · OpenAI GPT-3.5
+\`\`\`
+`,
+          },
+        ],
+      },
+      {
+        id: "projects/cryptartist-studio",
+        name: "cryptartist-studio",
+        type: "folder",
+        children: [
+          {
+            id: "projects/cryptartist-studio/README.md",
+            name: "README.md",
+            type: "file",
+            language: "markdown",
+            content: `# CryptArtist Studio
+
+The Open Creative Suite — A comprehensive creative platform with eleven distinct programs sharing a unified dark theme, common project format (.CryptArt), and deep AI integration.
+
+[View on GitHub](https://github.com/mattyjacks/CryptArtistStudio)
+
+## Programs in the Suite
+
+- **Media Mogul** — Video editor, image editor, and AI-powered media studio
+- **VibeCodeWorker** — Personal vibe-coding IDE powered by your own API keys
+- **DemoRecorder** — Screen recorder and live streamer for demos and gaming
+- **GameStudio** — Combined media + code + Godot engine for game development
+- **DictatePic** — GIMP-style image editor with AI generation and inpainting
+- **CryptArt Commander** — Terminal-based command center for API and CLI control
+- **DonatePersonalSeconds** — P2P compute resource sharing for distributed tasks
+- **Luck Factory** — AI luck seed generator with guided meditation
+- **Clone Tool** — Create .exe, .dmg, .deb installers from your config
+- **Settings** — API key management, OpenRouter, appearance, and data
+- **Suite Launcher** — Home screen to launch programs and open .CryptArt files
+
+## Contributions
+
+Worked on: Tax Help, VibeCodeWorker, and DictatePic features.
+
+## Tech Stack
+
+\`\`\`
+React · TypeScript · Rust Backend · Tauri · OpenRouter AI · FFmpeg
+\`\`\`
+`,
+          },
+        ],
+      },
+      {
+        id: "projects/birch-creek-building",
+        name: "birch-creek-building",
+        type: "folder",
+        children: [
+          {
+            id: "projects/birch-creek-building/README.md",
+            name: "README.md",
+            type: "file",
+            language: "markdown",
+            content: `# Birch Creek Building
+
+A professional WordPress-based website for Birch Creek Building.
+
+[View Website](https://www.birchcreekbuilding.com)
+
+## Overview
+
+Contributed to the development and maintenance of the Birch Creek Building website, a WordPress-powered platform showcasing building services and portfolio work.
+
+## Tech Stack
+
+\`\`\`
+WordPress · PHP · MySQL
+\`\`\`
+`,
+          },
+        ],
+      },
+      {
+        id: "projects/sitefari",
+        name: "sitefari",
+        type: "folder",
+        children: [
+          {
+            id: "projects/sitefari/README.md",
+            name: "README.md",
+            type: "file",
+            language: "markdown",
+            content: `# Sitefari
+
+An ongoing creative project in active development.
+
+[View Website](https://sitefari.com)
+
+## Overview
+
+Sitefari is a continuously evolving project combining design, development, and creative innovation. Currently in active development with regular updates and improvements.
+`,
+          },
+        ],
+      },
     ],
   },
   {
