@@ -68,7 +68,7 @@ I specialize in building modern web applications with **React**, **Next.js**, **
 
 A sleek, modern Formula 1 race tracker and dashboard. Browse race schedules, view detailed race results, and check driver standings — all powered by live F1 data.
 
-[View on GitHub](https://github.com/rssllssn/apextrackerf1)
+[View Website](https://apextrackerf1.vercel.app/)
 
 ## Features
 
