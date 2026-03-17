@@ -118,7 +118,7 @@ function WelcomeScreen() {
     <div className="flex-1 flex flex-col items-center justify-center bg-[var(--bg-editor)] text-[var(--text-secondary)] select-none">
       <div className="text-center space-y-6">
         <h1 className="text-5xl font-light text-[var(--text-watermark)] tracking-tight">
-          rssllssn.dev
+          rssllssn.com
         </h1>
         <div className="space-y-2 text-sm">
           <p>

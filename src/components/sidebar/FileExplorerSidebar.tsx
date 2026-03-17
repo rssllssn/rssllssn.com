@@ -22,7 +22,7 @@ export default function FileExplorerSidebar({ data }: FileExplorerSidebarProps) 
 
       {/* Workspace label */}
       <div className="px-2 py-1 text-[11px] font-bold uppercase tracking-wider text-[var(--text-primary)]">
-        rssllssn.dev
+        rssllssn.com
       </div>
 
       {/* Tree */}
