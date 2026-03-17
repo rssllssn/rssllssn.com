@@ -118,7 +118,7 @@ function WelcomeScreen() {
     <div className="flex-1 flex flex-col items-center justify-center bg-[var(--bg-editor)] text-[var(--text-secondary)] select-none">
       <div className="text-center space-y-6">
         <img 
-          src="/logo/rssllssn.png" 
+          src="/rssllssn.png" 
           alt="rssllssn logo" 
           className="w-24 h-24 rounded-lg shadow-lg"
         />
